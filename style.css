@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #001f3f;
+  /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #ededed;
+}
+
+header {
+  text-align: center;
+}
+
+form {
+  border-radius: 5px;
+  background: linear-gradient(145deg, #d5d5d5, #fefefe);
+  box-shadow: 20px 20px 36px #5f5f5f, -20px -20px 36px #ffffff;
+}
+
+.flex-col {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: start;
+  width: max-content;
+  align-self: flex-end;
+}
+
+.mensajes {
+  list-style: none;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .flex-col {
+    padding: 16px;
+    gap: 48px;
+  }
+
+  label {
+    flex-direction: column;
+    justify-content: start;
+    align-items: self-start;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.self-start {
+  flex-direction: column;
+  align-items: start;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+
+input,
+option,
+select {
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: calc(1.5rem * 0.5);
+  padding-left: calc(1.5rem * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 720px;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Validación</title>
+</head>
+
+<body>
+  <main class="container">
+    <header class="flex-col">
+      <h1>Prueba de validación de formulario</h1>
+      <p>Esta prueba de validación de formulario se hace por medio de JavaScript.</p>
+    </header>
+    <form class="flex-col">
+      <label>
+        <span>
+          <span class="red">*</span> Nombre
+        </span>
+        <input type="text" name="nombre" id="nombre">
+      </label>
+      <label>
+        <span>
+          <span class="red">*</span> Apellido
+        </span>
+        <input type="text" name="apellido" id="apellido">
+      </label>
+      <label>
+        Teléfono
+        <input type="tel" name="telefono" id="telefono">
+      </label>
+      <label>
+        <span>
+          <span class="red">*</span> E-mail
+        </span>
+        <input type="email" name="email" id="email">
+      </label>
+      <label>
+        Foto
+        <input type="file" name="archivo" id="archivo">
+      </label>
+      <label>
+        Fecha de Nacimiento
+        <input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento">
+      </label>
+      <label class="self-start">
+        ¿Es usted socio?
+        <div class="radio-container">
+          <label class="flex-row">
+            <input type="radio" name="genero" id="femenino" value="femenino">
+            Soy socio
+          </label>
+          <label class="flex-row">
+            <input type="radio" name="genero" id="masculio" value="masculio">
+            No soy socio
+          </label>
+        </div>
+      </label>
+      <label for="localidad">Localidad
+        <select name="localidad" id="localidad">
+          <option disabled selected value="">selecionar localidad</option>
+          <option value="Almafuerte">Almafuerte</option>
+          <option value="Alta Gracia">Alta Gracia</option>
+          <option value="Mina Clavero">Mina Clavero</option>
+          <option value="Villa Carlos Paz">Villa Carlos Paz</option>
+        </select>
+      </label>
+      <ul class="mensajes"></ul>
+
+      <button type="submit" class="btn">Validar formulario</button>
+    </form>
+  </main>
+  <script type="module" src="/index.js"></script>
+</body>
+
+</html>
