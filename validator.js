@@ -24,6 +24,12 @@ export function validarFormulario() {
         error: "Por favor, introduce un correo electrónico válido",
         vacio: (data.email.trim() === "")
       },
+      {
+        campo: "Mensaje",
+        valido: (/^[\s\S]{1,500}$/).test(data.mensaje),
+        error: "El mensaje no puede tener más de 500 caracteres",
+        vacio: (data.mensaje.trim() === "")
+      },
     ]
 
     let listaErrores = "";
