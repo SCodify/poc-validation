@@ -33,16 +33,16 @@ export function validarFormulario() {
     ]
 
     let listaErrores = "";
-    let valido = true;
+    let formularioValido = true;
 
     camposConValidación.forEach(itemCampo => {
       if(itemCampo.vacio){
         listaErrores += `<li class="red">El campo "${itemCampo.campo}" es requerido</li>`;
-        valido = false
+        formularioValido = false
       } else {
         if(!itemCampo.valido) {
           listaErrores += `<li class="red">${itemCampo.error}</li>`;
-          valido = false
+          formularioValido = false
         }
       }
 
@@ -50,10 +50,13 @@ export function validarFormulario() {
     
     mensajes.innerHTML = ""
 
-    if(!valido) {
+    if(!formularioValido) {
       mensajes.innerHTML = listaErrores
     } else {
       mensajes.innerHTML = `<li class="green">El fomulario es valido</li>`
+      setTimeout(() => {
+        mensajes.innerHTML = "" 
+      }, 5000);
       formulario.reset()
     }
   })
